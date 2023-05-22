@@ -15,7 +15,7 @@
     <title>Responsive Navbar</title>
   </head>
   <body>
-    <div class="header">
+    <header>
       <div class="navbar">
         <a class="logo" href="#">Web Dev Creative</a>
         <ul class="links">
@@ -24,25 +24,45 @@
           <li><a href="services">Services</a></li>
           <li><a href="contact">Contact</a></li>
         </ul>
-        <a href="" class="action_btn">Get Started</a>
+        <a href="#" class="action_btn">Get Started</a>
         <div class="toggle_btn">
           <i class="fa-solid fa-bars"></i>
         </div>
       </div>
-    </div>
 
-    <div class="dropdown_menu open">
-          <li><a href="home">Home</a></li>
-          <li><a href="about">About</a></li>
-          <li><a href="services">Services</a></li>
-          <li><a href="contact">Contact</a></li>
-          <li><a href="" class="action_btn">Get Started</a></li>
-    </div>
+      <div class="dropdown_menu">
+        <li><a href="home">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="services">Services</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="" class="action_btn">Get Started</a></li>
+      </div>
+    </header>
 
+    <main>
+      <div id="hero">
+        <h1>Welcome</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Eius
+          facilis, voluptatibus minus quia recusandae libero.
+        </p>
+      </div>
+    </main>
 
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
 
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        dropDownMenu.classlist.toggle("open");
+        const isOpen = dropDownMenu.classlist.container("open");
 
-
-
+        toggleBtnIcon.classlist = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
   </body>
 </html>

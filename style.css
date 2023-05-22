@@ -88,31 +88,50 @@ header{
   display: none;
   position: absolute;
   right: 2rem;
-  top: 80px;
+  top: 60px;
   height: 0;
   width: 300px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;
+  transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
 }
 
 .dropdown_menu.open{
   height: 240px;
 }
 
-.dropdown_menu li {
+.dropdown_menu li{
   padding: 0.7rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.dropdown_menu .action_btn {
+.dropdown_menu .action_btn{
   width: 100%;
   display: flex;
   justify-content: center;
 }
+
+/* Hero */
+#hero{
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+}
+
+
 /* Responsive Design */
 
 @media (max-width: 992px){
@@ -123,5 +142,16 @@ header{
 
   .navbar .toggle_btn{
     display: block;
+  }
+
+  .dropdown_menu{
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown_menu{
+    left: 2rem;
+    width: unset;
   }
 }
